@@ -19,12 +19,9 @@
       <p>Jika Bapak dan Ibu memiliki ide dan masukan untuk kolaborasi yang lebih baik lagi sampaikan melalui kuisioner berikut ini.</p>
 
       <div class="btn-wrapper">
-        <a href="{{ route('selesai') }}" class="btn btn-primary shadow">Isi Kuisioner</a>
+        <a href="{{ route('kuisioner') }}" class="btn btn-primary shadow">Isi Kuisioner</a>
       </div>
-
     </div>
-
-
   </div>
 </div>
 @endsection
