@@ -1,0 +1,12 @@
+body {
+  background: url('/images/lastpage.png') fixed;
+  background-size: cover;
+}
+
+.logo {
+  filter: brightness(0) invert(1);
+}
+
+main p {
+  font-size: 1.4rem;
+}

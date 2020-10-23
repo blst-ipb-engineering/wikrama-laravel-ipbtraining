@@ -15,3 +15,4 @@ mix
   .js('resources/js/app.js', 'public/js')
   .styles(['resources/css/app.css'], 'public/css/app.css')
   .styles(['resources/css/homepage.css'], 'public/css/homepage.css')
+  .styles(['resources/css/selesai.css'], 'public/css/selesai.css')
