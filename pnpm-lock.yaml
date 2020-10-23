@@ -5,9 +5,12 @@ dependencies:
 devDependencies:
   axios: 0.19.2
   cross-env: 7.0.2
-  laravel-mix: 5.0.7
+  dotenv: 8.2.0
+  laravel-mix: 5.0.7_vue-template-compiler@2.6.12
   lodash: 4.17.20
+  md5: 2.3.0
   resolve-url-loader: 3.1.2
+  vue-template-compiler: 2.6.12
 lockfileVersion: 5.2
 packages:
   /@babel/code-frame/7.10.4:
@@ -2461,6 +2464,10 @@ packages:
     dev: true
     resolution:
       integrity: sha512-m62ShEObQ39CfralilEQRjH6oAMtNCV1xJyEx5LpRYUVN+EviphDgUc/F3hnYbADmkiNs67Y+3ylmlG7Lnu+FA==
+  /de-indent/1.0.2:
+    dev: true
+    resolution:
+      integrity: sha1-sgOOhG3DO6pXlhKNCAS0VbjB4h0=
   /debug/2.6.9:
     dependencies:
       ms: 2.0.0
@@ -2699,6 +2706,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-HygQCKUBSFl8wKQZBSemMywRWcEDNidvNbjGVyZu3nbZ8qq9ubiPoGLMdRDpfSrpkkm9BXYFkpKxxFX38o/76w==
+  /dotenv/8.2.0:
+    dev: true
+    engines:
+      node: '>=8'
+    resolution:
+      integrity: sha512-8sJ78ElpbDJBHNeBzUbUVLsqKdccaa/BXF1uPTw3GrvQTBgrQrtObr2mUrE38vzYd8cEv+m/JBfDLioYcfXoaw==
   /duplexify/3.7.1:
     dependencies:
       end-of-stream: 1.4.4
@@ -4313,7 +4326,7 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
-  /laravel-mix/5.0.7:
+  /laravel-mix/5.0.7_vue-template-compiler@2.6.12:
     dependencies:
       '@babel/core': 7.12.3
       '@babel/plugin-proposal-object-rest-spread': 7.12.1_@babel+core@7.12.3
@@ -4346,7 +4359,7 @@ packages:
       style-loader: 0.23.1
       terser: 3.17.0
       terser-webpack-plugin: 2.3.8_webpack@4.44.2
-      vue-loader: 15.9.3_css-loader@1.0.1+webpack@4.44.2
+      vue-loader: 15.9.3_f6e56efd8bc00bb181879f48ac6daadd
       webpack: 4.44.2_webpack-cli@3.3.12
       webpack-cli: 3.3.12_webpack@4.44.2
       webpack-dev-server: 3.11.0_93ca2875a658e9d1552850624e6b91c7
@@ -4356,6 +4369,8 @@ packages:
     dev: true
     engines:
       node: '>=8.9.0'
+    peerDependencies:
+      vue-template-compiler: '*'
     resolution:
       integrity: sha512-TL5txnQkzcwM8DYckgzjISSPGyZN6znFYb4NgtTSi9aIvfzOIEC6p0eYM6wDa/BkEKv290Ru6HWmH6Q2XApogQ==
   /last-call-webpack-plugin/3.0.0:
@@ -7014,7 +7029,7 @@ packages:
     dev: true
     resolution:
       integrity: sha512-BXq3jwIagosjgNVae6tkHzzIk6a8MHFtzAdwhnV5VlvPTFxDCvIttgSiHWjdGoTJvXtmRu5HacExfdarRcFhog==
-  /vue-loader/15.9.3_css-loader@1.0.1+webpack@4.44.2:
+  /vue-loader/15.9.3_f6e56efd8bc00bb181879f48ac6daadd:
     dependencies:
       '@vue/component-compiler-utils': 3.2.0
       css-loader: 1.0.1_webpack@4.44.2
@@ -7022,6 +7037,7 @@ packages:
       loader-utils: 1.4.0
       vue-hot-reload-api: 2.3.4
       vue-style-loader: 4.1.2
+      vue-template-compiler: 2.6.12
       webpack: 4.44.2_webpack-cli@3.3.12
     dev: true
     peerDependencies:
@@ -7043,6 +7059,13 @@ packages:
     dev: true
     resolution:
       integrity: sha512-0ip8ge6Gzz/Bk0iHovU9XAUQaFt/G2B61bnWa2tCcqqdgfHs1lF9xXorFbE55Gmy92okFT+8bfmySuUOu13vxQ==
+  /vue-template-compiler/2.6.12:
+    dependencies:
+      de-indent: 1.0.2
+      he: 1.2.0
+    dev: true
+    resolution:
+      integrity: sha512-OzzZ52zS41YUbkCBfdXShQTe69j1gQDZ9HIX8miuC9C3rBCk9wIRjLiZZLrmX9V+Ftq/YEyv1JaVr5Y/hNtByg==
   /vue-template-es2015-compiler/1.9.1:
     dev: true
     resolution:
@@ -7391,8 +7414,11 @@ specifiers:
   axios: ^0.19
   bootstrap: ^4.5.3
   cross-env: ^7.0
+  dotenv: ^8.2.0
   laravel-mix: ^5.0.1
   lodash: ^4.17.19
+  md5: ^2.3.0
   normalize.css: ^8.0.1
   resolve-url-loader: ^3.1.0
   vue: ^3.0.2
+  vue-template-compiler: ^2.6.12
