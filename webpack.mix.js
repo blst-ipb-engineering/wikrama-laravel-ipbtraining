@@ -12,8 +12,8 @@ const mix = require('laravel-mix')
  */
 
 mix
-  .js('/resources/js/app.js', '/public/js')
+  .js('resources/js/app.js', 'public/js')
   .styles(
-    ['/resources/css/app.css', '/resources/css/normalize.css'],
-    '/public/css/app.css'
+    ['resources/css/app.css', 'resources/css/normalize.css'],
+    'public/css/app.css'
   )
