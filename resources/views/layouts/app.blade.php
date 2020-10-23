@@ -15,9 +15,9 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg navbar-light @if (Request::is('selesai')) bg-transparent @else bg-light @endif shadow">
+    <nav class="navbar navbar-expand-lg navbar-light @if (Request::is('selesai')) bg-transparent @else bg-light shadow @endif">
       <a class="navbar-brand" href="#">
-        <img src="/images/logo.png" alt="Logo IPB Training">
+        <img src="/images/logo.png" alt="Logo IPB Training" class="logo">
       </a>
     </nav>
   </header>
