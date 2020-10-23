@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KuesionerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/kuisioner', [KuesionerController::class, 'index'])->name('kuisioner');
+Route::post('/kuisioner', [KuesionerController::class, 'simpan']);
+Route::view('/', 'homepage')->name('homepage');
+Route::view('/selesai', 'selesai')->name('selesai');
