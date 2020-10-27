@@ -68,8 +68,8 @@
 
     <div class="row" id="attitude">
       <div class="col-sm-12 mt-5 text-center">
-        <h1>Fasilitas Pendukung</h1>
-        <p>(Aplikasi penunjang, ruang pelatihan, makanan)</p>
+        <h1>Layanan Panitia</h1>
+        <p>(attitude)</p>
         <img v-if="!star1" src="/images/pertanyaan/star-empty.png" alt="" v-on:click="toggle1">
         <img v-if="star1" src="/images/pertanyaan/star.png" alt="" v-on:click="toggle1">
 
@@ -84,15 +84,15 @@
 
         <input type="text" name="attitude" v-bind:value="score" hidden>
 
-        <h3 class="mt-4">Komentar terkait fasilitas pendukung</h3>
+        <h3 class="mt-4">Komentar terkait layanan panitia</h3>
         <input type="text" class="form-control" name="attitudeKomen" required>
       </div>
     </div>
 
     <div class="row" id="kinerja">
       <div class="col-sm-12 mt-5 text-center">
-        <h1>Fasilitas Pendukung</h1>
-        <p>(Aplikasi penunjang, ruang pelatihan, makanan)</p>
+        <h1>Layanan Panitia</h1>
+        <p>(kinerja)</p>
         <img v-if="!star1" src="/images/pertanyaan/star-empty.png" alt="" v-on:click="toggle1">
         <img v-if="star1" src="/images/pertanyaan/star.png" alt="" v-on:click="toggle1">
 
@@ -107,7 +107,7 @@
 
         <input type="text" name="kinerja" v-bind:value="score" hidden>
 
-        <h3 class="mt-4">Komentar terkait fasilitas pendukung</h3>
+        <h3 class="mt-4">Komentar terkait layanan panitia</h3>
         <input type="text" class="form-control" name="kinerjaKomen" required>
       </div>
     </div>
@@ -123,7 +123,7 @@
       </div>
     </div>
 
-    <button class="btn btn-primary">Submit</button>
+    <button class="btn btn-primary shadow btn-block">Submit</button>
 
   </div>
 </form>
