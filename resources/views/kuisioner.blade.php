@@ -18,7 +18,7 @@
       <div class="col-sm-12 col-lg-6 mt-5">
         <h1>Judul Training</h1>
         <select name="judulTraining" class="custom-select">
-          <option selected>Open this select menu</option>
+          <option selected>Pilih judul training</option>
           @foreach ($trainings as $training)
           <option value="{{ $training->id }}">{{ $training->nama }}</option>
           @endforeach

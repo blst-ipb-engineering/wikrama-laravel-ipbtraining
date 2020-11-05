@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/kuisioner', [KuesionerController::class, 'index'])->name('kuisioner');
-Route::post('/kuisioner', [KuesionerController::class, 'simpan']);
+Route::get('/kuesioner', [KuesionerController::class, 'index'])->name('kuesioner');
+Route::post('/kuesioner', [KuesionerController::class, 'simpan']);
 Route::view('/', 'homepage')->name('homepage');
 Route::view('/selesai', 'selesai')->name('selesai');
