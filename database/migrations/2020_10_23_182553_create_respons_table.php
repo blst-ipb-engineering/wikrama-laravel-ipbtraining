@@ -20,13 +20,13 @@ class CreateResponsTable extends Migration
             $table->string('no_rek');
             $table->string('email');
             $table->string('no_telp');
-            $table->tinyInteger('fasilitas');
-            $table->string('fasilitas_komen');
-            $table->tinyInteger('attitude');
-            $table->string('attitude_komen');
-            $table->tinyInteger('kinerja');
-            $table->string('kinerja_komen');
-            $table->string('saran');
+            $table->tinyInteger('kecepatan_pembayaran');
+            $table->string('kp_komen');
+            $table->tinyInteger('fasilitas_pendukung');
+            $table->string('fp_komen');
+            $table->tinyInteger('layanan_panitia');
+            $table->string('lp_komen');
+            $table->string('saran_topik');
             $table->timestamps();
         });
     }

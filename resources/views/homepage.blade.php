@@ -13,15 +13,15 @@
     </div>
 
     <div class="col-sm-12 col-lg-6 mt-5">
-      <h1>Kuesioner<br>
+      <strong>Kuesioner
         Trainer 2020
-      </h1>
-      <p>Jika Bapak dan Ibu memiliki ide dan masukan untuk kolaborasi yang lebih baik lagi sampaikan melalui kuisioner berikut ini.</p>
+      </strong>
+      <p class="subhead">Jika Bapak dan Ibu memiliki ide dan masukan untuk kolaborasi yang lebih baik lagi sampaikan melalui kuisioner berikut ini.</p>
 
       <div class="btn-wrapper">
-        <a href="{{ route('kuesioner') }}" class="btn btn-primary shadow">Isi Kuesioner</a>
+        <a href="{{ route('kuesioner') }}" class="btn btn-primary shadow subhead">Isi Kuesioner</a>
       </div>
     </div>
   </div>
-</div>
+</div> 
 @endsection
