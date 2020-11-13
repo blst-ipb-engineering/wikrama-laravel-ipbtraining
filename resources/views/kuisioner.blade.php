@@ -41,7 +41,7 @@
 
     <div class="col-sm-12 col-lg-6">
       <h1>Nama</h1>
-      <select name="nama" id="nama" class="form-control input-lg dynamic" data-dependent="trainer">
+      <select name="trainer_id" id="nama" class="form-control input-lg dynamic" data-dependent="trainer">
       <option value="">Pilih nama</option>
       </select>
     </div>

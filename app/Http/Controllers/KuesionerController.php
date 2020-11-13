@@ -56,7 +56,7 @@ class KuesionerController extends Controller
   {
     $respon = new Respon();
     $respon->training_id = $req['judul_training'];
-    $respon->nama = $req['nama'];
+    $respon->trainer_id = $req['trainer_id'];
     $respon->no_rek = $req['noRek'];
     $respon->email = $req['email'];
     $respon->no_telp = $req['noTelp'];
