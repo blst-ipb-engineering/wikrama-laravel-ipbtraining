@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\KuesionerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/kuesioner', [KuesionerController::class, 'index'])->name('kuesioner');
+Route::post('/kuesioner', [KuesionerController::class, 'simpan']);
+Route::view('/', 'homepage')->name('homepage');
+Route::view('/selesai', 'selesai')->name('selesai');
+Route::any('kuesioner/fetch',[KuesionerController::class, 'fetch'])->name('kuesioner.fetch');
+Route::get('/ajax-name', [KuesionerController::class, 'ajax']);

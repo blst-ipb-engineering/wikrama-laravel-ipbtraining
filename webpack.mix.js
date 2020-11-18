@@ -1,4 +1,4 @@
-const mix = require('laravel-mix');
+const mix = require('laravel-mix')
 
 /*
  |--------------------------------------------------------------------------
@@ -11,7 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+mix
+  .js('resources/js/app.js', 'public/js')
+  .styles(['resources/css/app.css'], 'public/css/app.css')
+  .styles(['resources/css/homepage.css'], 'public/css/homepage.css')
+  .styles(['resources/css/selesai.css'], 'public/css/selesai.css')
+  .styles(['resources/css/kuisioner.css'], 'public/css/kuisioner.css')

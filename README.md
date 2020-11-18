@@ -1,61 +1,83 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+## Pembagian Tugas
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+![alt text](https://github.com/blst-ipb-engineering/wikrama-laravel-ipbtraining/blob/master/public/images/timeline-project-bulan1.jpeg)
 
-## About Laravel
+## About Project
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Project dibuat sebagai tempat konsolidasi tugas PKL RPL Wikrama dari IPBTRAINING. Laravel yang digunakan versi 8.x. Untuk mengerjakan tugas yang sudah diberikan ikuti instruksi berikut:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   Silahkan Fork project & branch pada GitHub masing-masing
+-   Checkout pada branch project sesuai tugas
+-   Coding. Buat penambahan fitur / perbaikan bug.
+-   Commit.
+-   Kirim project author pull request.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Instruksi khusus Project [Kuesioner Peserta](https://ipbtraining.com/kuesioner)
 
-## Learning Laravel
+UI UX = silahkan akses [di sini](https://docs.google.com/forms/d/e/1FAIpQLSf5dFOPbi-Hc8Z8LeO2rDvyxZ9WmhpuG6ma6bs3ndLmf7W0JA/viewform) untuk informasi / form yang harus ada di kuesioner peserta. silahkan berkreasi sebagus mungkin, cari referensi2 di pinterest / google image untuk desain user interface
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+-   Front End :
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+1. FE KUESIONER = Silahkan buat blade semirip mungkin dengan yang dibuat oleh UI / UX.
+2. FE OUTPUT KUESIONER = Silahkan buat halaman yang menampilkan hasil inputan kuesioner dengan Packages Chart JS, minta format data yang diinginkan dengan BE CONTROLLER / DB OUTPUT
+3. BE CONTROLLER / DB KUESIONER = Sediakan data, logic (Route, Controller, Model, Migration) kebutuhan data dari FE KUESIONER (Menerima Inputan, Validasi, & DOM Muncul Trainer tertentu setelah produk training dipililh)
+4. BE CONTROLLER / DB OUTPUT = Buat Controller untuk menampilkan output dari struktur data yang sudah dibuat oleh Nomor 3 ke dalam Chartjs
 
-## Laravel Sponsors
+### Struktur TABLE
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+Untuk nomor 3 :
 
-### Premium Partners
+1. Buat table products = untuk menempatkan data training => field db wajib: id, training_title
+2. Buat table participants = untuk menempatkan data peserta => field db wajib: id, name, email
+3. Buat table Pivot product_participant = untuk menghubungkan produk dengan peserta dengan skema many to many => field: id, product_id, participant_id, ...isi data kuesioner pada section PENAMAAN FIELD TABLE
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+4. Buat table trainers = untuk menempatkan data trainer => field db wajib: id, full_name, occupation, photo (STRING SEMUA)
+5. Buat table Pivot product_trainer = untuk menghubungkan produk dengan trainer dengan skema many to many => field db wajib : id, product_id, trainer_id
 
-## Contributing
+6. Buat table trainer_ratings = untuk menempatkan data rating trainer tertentu pada kuesioner = field wajib => participant_id, product_id, trainer_id, penyampaian_rating, komentar (TEXT)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+data kuesioner diletakkan pada table pivot.
 
-## Code of Conduct
+### PENAMAAN FIELD TABLE
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+FYI kuesioner peserta sebelumnya sudah ada, namun perlu ada penyesuaian, saat ini ada nama field berikut yang sudah exists di web app kami.
+gunakan nama field di bawah
 
-## Security Vulnerabilities
+-   sumber_informasi (VARCHAR) = Dari mana anda mengetahui informasi training ini? \*
+-   merekomendasikan (VARCHAR) = Apakah anda merekomendasikan training ini untuk teman anda? (tuliskan nama dan kontaknya untuk penyampaian informasi - pealtihan) \*
+-   request_pelatihan (VARCHAR) = Tuliskan pelatihan lain yang anda butuhkan ?
+-   layanan_panitia_sikap (INT) = Layanan panitia (attitude) 1-4
+-   layanan_panitia_sikap_komentar (VARCHAR) = Komentar terkait layanan panitia (attitude)
+-   layanan_panitia_kinerja_kualitas (INT) = Layanan panitia (kinerja) \*
+-   layanan_panitia_kinerja_kualitas_komentar (VARCHAR) = Komentar terkait layanan panitia (kinerja)
+-   materi (INT) = Materi pelatihan sesuai dengan kebutuhan kerja? \*
+-   materi_komentar (VARCHAR) = Komentar materi pelatihan
+-   kesan (TEXT) = Kesan saya mengikuti kegiatan ini adalah?
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Pada table trainer_ratings
 
-## License
+-   penyampaian_trainer (INT)
+-   trainer_komentar (VARCHAR)
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## Instruksi khusus Project [Kuesioner Trainer](https://docs.google.com/forms/d/e/1FAIpQLSeKx5T0iJM4Xar09RV9mxj8d71iPfvbWulUvfXYHa4V9tupog/viewform?c=0&w=1)
+
+Kurang lebih sama instruksinya dengan di atas, namun yang berbeda, kami belum memiliki database untuk kuesioner trainer.
+
+-   Front End :
+
+1. FE KUESIONER = Silahkan buat blade semirip mungkin dengan yang dibuat oleh UI / UX.
+2. FE OUTPUT KUESIONER = Silahkan buat halaman yang menampilkan hasil inputan kuesioner dengan Packages Chart JS, minta format data yang diinginkan dengan BE CONTROLLER / DB OUTPUT
+3. BE CONTROLLER / DB KUESIONER = Sediakan data, logic (Route, Controller, Model, Migration) kebutuhan data dari FE KUESIONER (Menerima Inputan, Validasi, & DOM Muncul Trainer tertentu setelah produk training dipililh)
+4. BE CONTROLLER / DB OUTPUT = Buat Controller untuk menampilkan output dari struktur data yang sudah dibuat oleh Nomor 3 ke dalam Chartjs
+
+### Struktur TABLE
+
+1. Buat Ambil data judul training dari table yang sudah dibuat sebelumnya
+2. Buat migration update table trainers untuk menambah field informasi, Bank Nomor Rekening a.n (VARCHAR) dengan nama field "bank" , dan "wa_number"
+3. Buat migration update table pivot product_trainer untuk menambah field menampung informasi kuesioner trainer. data kuesioner diletakan pada table pivot ini. nama seperti yang di atas plus tambah field "new_training" untuk menampung jawaban pertanyaan "Apakah anda ingin mengembangkan training bersama kami? Topik apa yang ingin dikembangkan?"
+
+### PENAMAAN FIELD TABLE
+
+Gunakan penamaan seperti section kuesioner peserta
+
+Silahkan saling bekerjasama dan saling membantu ya. Kalau ada kendala kita diskusikan di grup ya. Happy coding !!
