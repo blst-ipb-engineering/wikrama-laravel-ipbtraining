@@ -14,9 +14,10 @@
             @endif
             </td>
 
-            <td valign="middle"><h5 class="h3"><b>Penyampaian {{$trainer->full_name}} {{$trainer->occupation}} jelas dan mudah dimengerti?</b></h5></td>
+            <td valign="middle"><h5 class="h1"><b>Penyampaian {{$trainer->full_name}} {{$trainer->occupation}} jelas dan mudah dimengerti?</b></h5></td>
         </tr>
     </table>
+    <br>
     <br>
     <div class="form-group">
         <div class="rating">
@@ -28,6 +29,7 @@
         @if ($errors->has('penyampaian_rating'))
         <small class="form-text text-danger">Please select one of these option.</small>
         @endif
+        <br>
         <br>
         <br>
         <center><input type="text" class="form-input" name="komentar[{{$trainer->id}}]" id="suit" placeholder="Komentar Anda" required value="{{old('komentar')}}"></center>

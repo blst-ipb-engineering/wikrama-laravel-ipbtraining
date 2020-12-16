@@ -18,4 +18,10 @@ class Product extends Model
     public function trainers(){
     	return $this->belongsToMany('App\Models\Trainer');
     }
+
+    public function topic()
+    {
+        return $this->hasMany('App\Models\Topic');
+    }
+
 }

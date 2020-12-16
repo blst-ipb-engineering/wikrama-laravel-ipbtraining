@@ -35,3 +35,17 @@ Route::get('/ajax-name',function(Request $request){
 });
 
 Route::get('/getTrainer', [ParticipantController::class, 'getTrainer']);
+
+
+Route::get('hasil', 'HasilController@index')->name('hasil');
+
+Route::get('training', 'HasilController@indexTraining')->name('training');
+Route::get('training/detail/{id}', [HasilController::class, 'detail'])->name('training.detail');
+
+
+
+// SERTIFIKAT
+Route::get('sertifikat', 'SertifikatController@index')->name('sertifikat');
+Route::get('sertifikat/search', 'SertifikatController@search')->name('sertifikat.search');
+Route::get('sertifikat/pdf/{sertifikat_number}', 'SertifikatController@pdf')->name('sertifikat.pdf');
+Route::post('/sertifikat/sendemail','SertifikatController@send');

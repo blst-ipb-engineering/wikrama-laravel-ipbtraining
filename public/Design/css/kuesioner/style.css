@@ -32,7 +32,7 @@ body{
 
 .radio {
   font-family: 'Nunito', sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   margin: 1px; 
 }
 
@@ -46,10 +46,6 @@ body{
   font-size: 35px;
 }
 
-.h3 {
-  font-family: 'playfair-display', serif; 
-  font-size: 35px;
-}
 
 .label-index {
   font-family: Work Sans;
@@ -66,35 +62,21 @@ body{
 .form-input {
   font-family: 'Nunito', sans-serif;
   text-align: center;
-  width: 50%;
+  width: 90%;
   border: 3px solid #ebebeb;
   outline-style: none;
   outline: none;
   border-top-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.form-event {
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  width: 100%;
-  border: 3px solid #ebebeb;
-  outline-style: none;
-  outline: none;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 500;
 }
 
 .form-star {
   font-family: 'Nunito', sans-serif;
   text-align: center;
-  width: 50%;
+  width: 90%;
   border: 3px solid #ebebeb;
   border-radius: 5px;
   outline-style: none;
@@ -102,7 +84,7 @@ body{
   border-top-color: transparent;
   border-right-color: transparent;
   border-left-color: transparent;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 500;
 }
 
@@ -121,7 +103,7 @@ body{
   .info-group {
     width: 100%;
   }
-
+}
 /*textbox lainnya*/
 .form-lain {
   font-family: 'Nunito', sans-serif;
@@ -202,40 +184,3 @@ h1 { font-size: 1.5em; margin: 10px; }
 .star > label:hover ~ input:checked ~ label, /* seleksi hover */
 .star > input:checked ~ label:hover ~ label { color: #FFED85;  }
 
-/*responsive*/
-@media (max-width:670px) {
-.h3 {
-  font-family: 'playfair-display', serif; 
-  font-size: 24px;
-}
-
-.form-input {
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  width: 100%;
-  border: 3px solid #ebebeb;
-  outline-style: none;
-  outline: none;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-.form-star {
-  font-family: 'Nunito', sans-serif;
-  text-align: center;
-  width: 100%;
-  border: 3px solid #ebebeb;
-  border-radius: 5px;
-  outline-style: none;
-  outline: none;
-  border-top-color: transparent;
-  border-right-color: transparent;
-  border-left-color: transparent;
-  font-size: 20px;
-  font-weight: 500;
-}
-
-}

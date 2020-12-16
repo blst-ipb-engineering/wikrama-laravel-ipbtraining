@@ -28,7 +28,6 @@ class CreateProductParticipantTable extends Migration
             $table->string('materi_komentar');
             $table->text('kesan');
             $table->timestamps();
-
             $table->foreign('participant_id')->references('id')->on('participants');
             $table->foreign('product_id')->references('id')->on('products');
         
