@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+  .image {
+    height: 45px;
+  }
+  .table {
+    margin-top: -35px;
+  }
+
+ footer{
+   position : relative;
+   bottom : 0;
+   width : 100%;
+   height : 100px;
+   background-color : #333;
+  padding-top : 30px;
+}
+.content{
+  text-align: center;
+  padding-top: 5%;
+}
+.selamat h2{
+  color: #14274e;
+  font-weight: bold;
+  font-size: 52px;
+  font-family:'Playfair Display', serif;
+}
+.selamat p{
+  color: #737373;
+  font-size: 24px;
+  font-family: 'Nunito', sans-serif;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 1px;
+  width: 30%;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  border-color: #4f4f4f;
+}
+input:focus {
+  border-color: #14274e;
+}
+
+  @media screen and (max-width: 500px) {
+  .image{
+    height: 45px;
+  }
+}
