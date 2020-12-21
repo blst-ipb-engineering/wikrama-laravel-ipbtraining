@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+main{
+	padding: 30px 0;
+}
+h5{
+	font-family: 'playfair-display', serif;
+}
+h3{
+	font-family: "Nunito";
+}
+.judul{
+	font-size: 40px;
+}
+.text{
+	font-size: 16.5px;
+}
+nav a {
+	color: #000;
+}
+.button{
+    color:#5EABE3;
+    float: right; 
+    font-style: bold;
+}

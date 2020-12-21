@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+main{
+    padding: 30px ;
+}
+h1{
+	font-family: 'playfair-display', serif;
+}
+p{
+	font-family: 'Nunito', sans-serif;
+}
+label{
+    font-family: 'Nunito', sans-serif;
+}
+h3{
+    font-family: 'Nunito', sans-serif;
+    float:  left;   
+
+}
+.judul{
+	font-size: 40px;
+}
+.text{
+	font-size: 16px;
+}
+th{
+    font-style: bold;
+}
+.btn_style{
+    border: 1px solid #5EABE3;
+    border-radius: 5px;
+    padding: 3px 10px;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);
+    color: #ffffff
+}
+.btn_ipb{
+    background-color:#5EABE3;
+    float: right; 
+    font-style: bold;
+}
+.modal-body h3{
+    font-size: 20px;
+}
