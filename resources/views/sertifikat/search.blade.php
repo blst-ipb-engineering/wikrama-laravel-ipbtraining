@@ -12,21 +12,22 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
 </head>
 <body>
-    <nav class="navbar navbar-light bg-light" style="border-bottom: solid 3px grey">
+    <nav class="navbar navbar-light bg-light" style="border-bottom: solid 1px grey">
         <!-- Navbar content -->
         <a class="navbar-brand">
             <img src="{{asset('Design/image/logo.png')}}" alt="logo" class="image">
         </a>
       </nav>
       <br>
+      <br>
       <div class="content">
         <div class="selamat">
           <h2>Selamat Datang di Portal Certiloka!</h2>
           <br>
-          <br>
-          <p>Temukan pengakuan atas sertifikat yang di terbitkan oleh IPB Training</p>
-          <p>dengan memasukan kode sertifikat yang anda miliki lalu tekan tombol pencarian</p>
+          <p>Temukan pengakuan atas sertifikat yang diterbitkan oleh IPB Training</p>
+          <p>dengan memasukan kode sertifikat yang anda miliki lalu tekan tombol pencarian.</p>
         </div>
+        <br>
         <br>
         <br>
         <form action="sertifikat/search">
@@ -35,7 +36,6 @@
             <i class="fa fa-search"></i>
         </div>
         </form>
-
       </div>
 </body>
 </html>

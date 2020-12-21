@@ -12,7 +12,7 @@
 	<div class="certiloka">
 		<center><img class="sertifikat" src="{{ asset('Design/image/sertifikat.png') }}" /></center>
                     <center><p class="name" style="margin-top: 30px"><b>{{$participant->name}}</b></label></center>
-					<center><p class="kursus"  style="margin-top: 5px"><b>Online course</b></label></center>
+
 					<center><p class="event"><b>{{$product->training_title}}</b></label></center>
                     <center><p class="date"><b>{{$data->tanggal}}</b></label></center>
 					<center><img class="qr" src="https://chart.apis.google.com/chart?cht=qr&chs=350x350&chld=l|1&chl={{URL::full()}}"> </center>
@@ -20,7 +20,7 @@
 	</div>
 	<div class="moduloka">
 		<center><img class="modul" src="{{ asset('Design/image/modul1.png') }}" /></center>
-		<center><p class="skpb"><b>SKPB Point with the Assignment Number:   {{$data->nomor_ketetapan_point}} {{$data->sertifikat_point}}  Point SKPB</b></label></center>
+		<center><p class="skpb">SKPB Point with the Assignment Number:   {{$data->nomor_ketetapan_point}} {{$data->sertifikat_point}}  Point SKPB</label></center>
 
           <table>
             <tbody>
@@ -29,10 +29,10 @@
               @endphp
               @foreach ($product->topic as $topik)
               <tr>
-                <ul>
-                <center><p class="modul{{$i}}"><b>{{$topik->topic_name}}</b></label></center>
-                <center><p class="menit{{$i}}"><b>{{$topik->duration}} Menit</b></label></center>
-                </ul>
+                <td>
+                <center><p class="modul{{$i}}">{{$topik->topic_name}}</label></center>
+                <center><p class="menit{{$i}}">{{$topik->duration}} Menit</label></center>
+                </td>
               </tr>
               @php
                   $i++
@@ -45,7 +45,7 @@
 	<br>
 	<div class="p-t-15">
         <center>
-          <a href="{{route('sertifikat.pdf', $data->sertifikat_number)}}" class="btn btn-primary" target="_blank">CETAK PDF</a>
+          <a href="{{route('sertifikat.pdf', $data->sertifikat_number)}}" class="btn btn-primary" target="_blank">Cetak PDF</a>
           <button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#exampleModal">Print Request</button>
         </center>
     </div>

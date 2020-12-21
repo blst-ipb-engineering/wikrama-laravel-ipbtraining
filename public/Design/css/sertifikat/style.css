@@ -97,7 +97,7 @@
 
 .modul1{
   position: absolute;
-  top: 235px;
+  top: 240px;
   left: 29%;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
@@ -107,7 +107,7 @@
 .menit1{
   position: absolute;
   top: 235px;
-  left: 60%;
+  left: 69%;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #737373;
@@ -125,7 +125,7 @@
 .menit2{
   position: absolute;
   top: 280px;
-  left: 60%;
+  left: 69%;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #737373;
@@ -143,7 +143,7 @@
 .menit3{
   position: absolute;
   top: 325px;
-  left: 60%;
+  left: 69%;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #737373;
@@ -161,7 +161,7 @@
 .menit4{
   position: absolute;
   top: 370px;
-  left: 60%;
+  left: 69%;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #737373;
@@ -179,11 +179,46 @@
 .menit5{
   position: absolute;
   top: 415px;
-  left: 60%;
+  left: 69%;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
   color: #737373;
   }
+.modul6{
+    position: absolute;
+    top: 460px;
+    left: 29%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #737373;
+    }
+
+.menit6{
+    position: absolute;
+    top: 460px;
+    left: 69%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #737373;
+    }
+
+.modul7{
+    position: absolute;
+    top: 505px;
+    left: 29%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #737373;
+    }
+
+.menit7{
+    position: absolute;
+    top: 505px;
+    left: 69%;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    color: #737373;
+    }
 
 /*button*/
 .btn {

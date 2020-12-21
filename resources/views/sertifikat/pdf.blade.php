@@ -3,57 +3,205 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>IPB Training</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <title>Download Pdf</title>
+
+
+<style>
+/* @import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap'); */
+/*sertifikat*/
+
+@font-face {
+    font-family: 'Playfair Display';
+    src: url({{ storage_path('fonts\PlayfairDisplay-VariableFont_wght.ttf') }}) format("truetype");
+    font-weight: 400; // use the matching font-weight here ( 100, 200, 300, 400, etc).
+    font-style: normal; // use the matching font-style here
+}
+
+@page { margin: 0px; }
+
+
+.certiloka{
+  position: relative;
+  float: center;
+}
+
+.sertifikat{
+  width: 1000px;
+  height: 700px;
+}
+
+.name{
+  position: absolute;
+  top: 230px;
+  left: 25%;
+  right: 25%;
+  font-family: 'Playfair Display';
+  font-size: 35px;
+  }
+
+.kursus{
+  position: absolute;
+  top: 310px;
+  left: 25%;
+  right: 25%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  }
+
+.event{
+  position: absolute;
+  top: 340px;
+  left: 10%;
+  right: 25%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  width: 800px
+  }
+
+.date{
+  position: absolute;
+  top: 400px;
+  left: 26%;
+  right: 25%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 18px;
+  color: #737373;
+  font-style: italic;
+  }
+
+.qr{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 490px;
+  left: 44%;
+}
+
+.online {
+
+    /* margin-top: 100px; */
+}
+.code{
+  position: absolute;
+  top: 649px;
+  left: 25%;
+  right: 25%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #737373;
+  }
+
+/*modul*/
+.moduloka{
+  position: relative;
+  float: center;
+}
+
+.modul{
+  width: 1000px;
+  height: 700px;
+  margin: 0.1px;
+}
+
+.skpb{
+    position: absolute;
+  top: 170px;
+  left: 25%;
+  right: 25%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px;
+  color: #737373;
+  font-style: italic;
+  }
+
+.modul1{
+  /* position: absolute; */
+  /* top: 249px;*/
+  left: 75%;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  color: #737373;
+
+  }
+
+.menit1{
+  /* position: absolute;
+  top: 235px;
+  left: 410%; */
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  display: inline-block;
+  color: #737373;
+  }
+
+
+
+/*button*/
+.btn {
+  line-height: 30px;
+  padding: 0 35px;
+  cursor: pointer;
+  background: #60C8DA;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+  color: #fff;
+  font-family: "Poppins", "Arial", "Helvetica Neue", sans-serif;
+}
+
+.btn--radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.btn--radius-2 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
+html { margin: 0px}
+body { margin: 0px; }
+h1 { font-size: 1.5em; }
+</style>
+
 </head>
 <body>
-    @if(session('success'))
-            <div class="alert alert-success" role="alert">
-                {{session('success')}}
-            </div>
-    @endif
-    <div class="d-flex justify-content-center">
-        <div class="container pb-4">
 
-        <h1>Sertifkat</h1>
-        <label>Diberikan kepada</label>
-        <h2>{{$participant->name}}</h2>
-        <label>yang telah menyelesaikan</label>
-        <h3>{{$product->training_title}}</h2>
-        <label style="display: block">{{$data->tanggal}}</label>
-        <label style="display: block">{{$data->sertifikat_number}}</label>
-        <label>{{$data->nomor_ketetapan_point}}</label>
-        <label>{{$data->sertifikat_point}}</label>
-        </div>
-        <div class="container">
-            <h1>Modul Pembelajaran</h1>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Judul Topik</th>
-                        <th>Durasi</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    @foreach ($product->topic as $topik)
-                    <tr>
-                        <th>{{$topik->topic_name}}</th>
-                        <th>{{$topik->duration}} Menit</th>
-                    </tr>
-                    @endforeach
-                </tbody>
-                {!! QrCode::size(100)->generate( URL::full()); !!}
-
-
-            </table>
-            {{-- <img src="https://chart.apis.google.com/chart?cht=qr&chs=350x350&chld=l|1&chl={{URL::full()}}"> --}}
-        </div>
-    </div>
-
-
+        <center><img class="sertifikat" src="{{ public_path('Design/image/sertifikat.png')}}"></center>
+        <center><p class="name" ><b>{{$participant->name}}</b></label></center>
+        <center><p class="event"><b>{{$product->training_title}}</b></label></center>
+        <center><p class="date"><b>{{$data->tanggal}}</b></label></center>
+        <center><img class="qr" src="https://chart.apis.google.com/chart?cht=qr&chs=350x350&chld=l|1&chl={{URL::full()}}"> </center>
+        <center><p class="code"><b>{{$data->sertifikat_number}}</b></label></center>
+<div class="moduloka">
+    <center><img class="modul" src="{{ public_path('Design/image/modul1.png') }}" /></center>
+    <center><p class="skpb">SKPB Point with the Assignment Number:   {{$data->nomor_ketetapan_point}} {{$data->sertifikat_point}}  Point SKPB</label></center>
+        <table style="position: absolute; top: 280px; margin:auto; left:15%" >
+            <tbody>
+            @php
+                $i = 1;
+            @endphp
+           @foreach ($product->topic as $topik)
+                <tr>
+                    <td width="470" style="margin-bottom: 20px; padding-bottom: 20px;">
+                        {{-- <p class="modul{{$i}}" > --}}
+                        <label class="modul1">{{$topik->topic_name}}</label>
+                        {{-- <p class="menit{{$i}}"> --}}
+                    </td>
+                    <td  width="300">
+                        <label class="menit1">{{$topik->duration}} Menit</label>
+                    </td>
+                </tr>
+            @php
+                $i++
+            @endphp
+            @endforeach
+            </tbody>
+        </table>
+</div>
 
 </body>
 </html>
+
+
+

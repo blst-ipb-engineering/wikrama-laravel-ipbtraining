@@ -64,8 +64,10 @@ class SertifikatController extends Controller
         $data = productParticipant::where('sertifikat_number', $request->sertifikat_number)->first();
         $product = Product::find($data->product_id);
         $participant = Participant::find($data->participant_id);
-
-        $pdf = PDF::loadview('sertifikat.pdf',compact('data','product','participant'));
-	    return $pdf->stream();
+        // $customPaper = array(0,0,750,600);
+        $customPaper = array(0,0,750,700);
+        // $pdf = PDF::loadview('sertifikat.test',compact('data','product','participant'))->setPaper($customPaper, 'landscape');
+        $pdf = PDF::loadview('sertifikat.test',compact('data','product','participant'))->setOption('page-width', '1000')->setOption('page-height', '700');
+        return $pdf->stream($participant->name."-".$product->training_title.".pdf");
     }
 }

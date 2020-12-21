@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
 
   .image {
-    height: 50px;
+    height: 45px;
   }
   .table {
     margin-top: -35px;
@@ -19,26 +21,29 @@
   padding-top: 5%;
 }
 .selamat h2{
+  color: #14274e;
   font-weight: bold;
-  font-size: 50px;
-  font-family:nunito;
+  font-size: 52px;
+  font-family:'Playfair Display', serif;
 }
 .selamat p{
-  font-size: 25px;
-  font-family: playfair display;
+  color: #737373;
+  font-size: 24px;
+  font-family: 'Nunito', sans-serif;
 }
+
 input {
   outline: 0;
-  border-width: 0 0 3px;
+  border-width: 0 0 1px;
   width: 30%;
+  font-size: 18px;
+  font-family: 'Nunito', sans-serif;
   text-align: center;
-  border-color: black;
+  border-color: #4f4f4f;
 }
 input:focus {
-  border-color: black;
+  border-color: #14274e;
 }
-
-
 
   @media screen and (max-width: 500px) {
   .image{
